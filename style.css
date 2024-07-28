@@ -1,0 +1,243 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Style pour le header */
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Style des boutons */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    max-width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Style du bouton d'affichage du formulaire */
+#showFormButton {
+    display: block;
+    margin: 20px auto;
+    background-color: #28a745;
+}
+
+#showFormButton:hover {
+    background-color: #218838;
+}
+
+/* Style du formulaire */
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    background-color: #007BFF;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style du tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.actions button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Style de la barre de recherche */
+#searchBox {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: calc(100% - 40px);
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Style du popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #f9fafb;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    max-width: 90%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+    filter: drop-shadow(0 50px 20px #0009);
+}
+
+.popup-content h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.popup-content p {
+    margin: 10px 0;
+    color: #6b5a9e;
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+/* Style pour les chiffres et le total */
+#totalAmount, #totalBalance {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#totalAmount {
+    background-color: #e9f7f5;
+    color: #007BFF;
+}
+
+#totalBalance {
+    background-color: #fbe4e4;
+    color: #dc3545;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .actions button {
+        width: 100%;
+        max-width: 150px;
+    }
+}
